@@ -3,6 +3,7 @@ require('dotenv').config();
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
+// MORGAN IS A MIDDLEWARE THAT LOGS DATA INTO OUR CONSOLE
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
@@ -16,6 +17,7 @@ var app = express();
 // view engine setup
 // DEFINE TEMPLATING AND WHERE OUR VIEW FILES LIVE
 app.set('views', path.join(__dirname, 'views'));
+// DEFINE WHICH VIEW ENGINE WE ARE USING
 app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
@@ -25,15 +27,20 @@ app.set('view engine', 'ejs');
 // HANDLERS ARE MADE
 // MOUNTING IN THE BEGINNING OF HTTP REQUEST AND AT THE END OF HTTP RESPONSE
 app.use(logger('dev'));
+// USE TO RETRIEVE DATA FROM FRONT-END
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+// GIVES US ACCESS TO THE PUBLIC FOLDER (CSS/JS/IMAGES/ETC)
 app.use(express.static(path.join(__dirname, 'public')));
 
+// LOOKS FOR THE DEFINITION OF OUR ROUTES
 app.use('/', index);
 app.use('/users', users);
 
 // catch 404 and forward to error handler
+// THIS IS A MIDDLEWARE FUNCTION WITH NO MOUNTPATH
+// THE FUNCTION IS EXECUTED EVERY TIME THE APP RECEIVES A REQUEST
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
