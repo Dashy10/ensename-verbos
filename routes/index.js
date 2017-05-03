@@ -9,6 +9,10 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Spanish Verb Conjugator' });
 });
 // DYNAMICALLY CREATING NEW ROUTE THAT INVOKES GETALLVERBS FUNCTION
-router.get('/present-tense', db.getAllverbs);
+
 
 module.exports = router;
+
+
+// conditions for verbs that I dont have yet
+// error message? matching character length

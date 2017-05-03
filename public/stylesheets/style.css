@@ -1,15 +1,16 @@
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
-  color:white;
-  background-image: url('../images/spain_background.jpeg');
+  color:#351c75;
+  background-image: url('../images/spain-background.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #351c75;
 }
 
 .flex_wrapper {
   position: relative;
-  top: 100px;
+  top: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,4 +18,15 @@ body {
 }
 .flex_wrapper h1 {
   font-size: 35pt;
+}
+
+footer {
+  position: relative;
+  top: 430px;
+  color: white;
+  font-size: 18pt;
+}
+
+footer span {
+  padding: 55px;
 }
