@@ -22,11 +22,16 @@ body {
 
 footer {
   position: relative;
-  top: 430px;
+  top: 450px;
   color: white;
   font-size: 18pt;
 }
 
 footer span {
-  padding: 55px;
+  padding: 75px;
+  padding-bottom: 0px;
+}
+a {
+  text-decoration: none;
+  color: white;
 }

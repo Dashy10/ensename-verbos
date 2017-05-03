@@ -5,8 +5,14 @@
   <body>
     <div class = 'flex_wrapper'>
       <h1><%= title %></h1>
-      <form id="dame_verbos" method="GET">
-        <input type= "text" name="verbo" placeholder="dame verbos">
+      <form id="crear_verbos" method="POST">
+        <input type= "text" name="verbo" placeholder="verbo">
+        <input type= "text" name="yo" placeholder="yo">
+        <input type= "text" name="tú" placeholder="tú">
+        <input type= "text" name="él/ella/Usted" placeholder="él/ella/Usted">
+        <input type= "text" name="nosotros" placeholder="nosotros">
+        <input type= "text" name="vosotros" placeholder="vosotros">
+        <input type= "text" name="ellos/ellas/Ustedes" placeholder="ellos/ellas/Ustedes">
         <select name="tense">
             <option value ="present">Present</option>
             <option value ="preterite">Preterite</option>
@@ -20,7 +26,6 @@
     <footer>
       <span><a href="./">Hogar</a></span>
       <span>Sobre</span>
-      <span><a href="./contribuciones">Contribucíones</a></span>
       <span>Contacto</span>
     </footer>
 
