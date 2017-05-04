@@ -7,12 +7,13 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var cors = require('cors');
 // DEFINE WHERE WE WILL BE CREATING OUR ROUTES
 var index = require('./routes/index');
 var users = require('./routes/users');
 // ALLOWS US TO USE EXPRESS METHODS
 var app = express();
+app.use(cors());
 
 // view engine setup
 // DEFINE TEMPLATING AND WHERE OUR VIEW FILES LIVE
@@ -36,6 +37,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // LOOKS FOR THE DEFINITION OF OUR ROUTES
 app.use('/', index);
+
 app.use('/users', users);
 
 // catch 404 and forward to error handler

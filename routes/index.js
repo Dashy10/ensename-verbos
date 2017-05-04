@@ -14,6 +14,8 @@ router.get('/contribuciones', function(req, res, next) {
 });
 // DYNAMICALLY CREATING NEW ROUTE THAT INVOKES GETALLVERBS FUNCTION
 
+router.get('/present-tense/:id', db.getPresentverb);
+// router.get('/verbs', db.getAllverbs);
 
 module.exports = router;
 

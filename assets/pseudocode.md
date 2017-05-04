@@ -53,6 +53,16 @@ ON verb_table.id = conjugation_present.verb_id;
 
 ## Front-end Development
 
+### Enseñame Tus Verbos
 
+- Create a form with a get method
+- Populate said form with:
+- Input type that accepts text
+- Create a select tag with options for present, preterite, future and conditional
+- Input type that will act as a submit button
+
+#### Using jQuery:
+
+- 
 
 

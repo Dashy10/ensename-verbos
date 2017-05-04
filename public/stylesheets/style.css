@@ -20,18 +20,55 @@ body {
   font-size: 35pt;
 }
 
-footer {
+.front-page {
   position: relative;
-  top: 450px;
-  color: white;
+  top: 170px;
+  color: #DCBE68;
   font-size: 18pt;
 }
 
-footer span {
-  padding: 75px;
+.contribuciones {
+  position: relative;
+  top: 490px;
+  left: 50px;
+  color: #DCBE68;
+  font-size: 18pt;
+}
+
+.contribuciones span {
+  padding: 150px;
   padding-bottom: 0px;
+  padding-top: 0px;
+}
+/*index footer*/
+footer span {
+
+  padding: 95px;
+  padding-bottom: 0px;
+  padding-top: 0px;
 }
 a {
   text-decoration: none;
-  color: white;
+  color: #DCBE68;
+}
+
+.mostrame {
+  position: relative;
+  top: 50px;
+  width: 750px;
+  height: 300px;
+  background-color: #C2930B;
+  border: 7px solid black;
+  opacity: 0;
+}
+
+input[type=submit] {
+  font-size: 16px;
+  font-weight: bolder;
+  color: #351c75;
+  border: 4px solid #351c75;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #DCBE68;
+
 }
