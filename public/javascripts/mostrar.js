@@ -1,5 +1,5 @@
-$(document).ready(function(e){
-
+$(function(){
+    let foo = 123;
   // grab button by id
   $('#get_verbs').on('click',function(e){
       e.preventDefault();
@@ -7,7 +7,12 @@ $(document).ready(function(e){
 
   });
 
-
+  function pop(){
+    axios.get('http://localhost:3000/present-tense/1')
+    .then(function(res){
+      console.log(res)
+    })
+  }
 
 
 
