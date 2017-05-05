@@ -15,62 +15,62 @@ INSERT INTO verb_table (verb)
   ('esperar');
 
 
-INSERT INTO conjugation_present (verb_id, yo, "tú", "él/ella/Usted", nosotros, vosotros, "ellos/ellas/Ustedes" )
+INSERT INTO conjugation_present (yo, "tú", "third", nosotros, vosotros, "group" )
   VALUES
-  ('1', 'soy', 'eres', 'es', 'somos', 'sois', 'son'),
-  ('2', 'estoy', 'estás', 'está', 'estamos', 'estáis', 'están'),
-  ('3', 'tengo', 'tienes', 'tiene', 'tenemos', 'tenéis', 'tienen'),
-  ('4', 'conozco', 'conoces', 'conocen', 'conocemos', 'conocéis', 'conocen'),
-  ('5', 'hago', 'haces', 'hace', 'hacemos', 'hacéis', 'hacen'),
-  ('6', 'he', 'has', 'ha,hay', 'hemos', 'habéis', 'han'),
-  ('7', 'bebo', 'bebes', 'bebe', 'bebemos', 'bebéis', 'beben'),
-  ('8', 'como', 'comes', 'come', 'comemos', 'coméis', 'comen'),
-  ('9', 'siento', 'sientes', 'siente', 'sentimos', 'sentís', 'sienten'),
-  ('10', 'espero', 'esperas', 'espera', 'esperamos', 'esperáis', 'esperan');
+  ('soy', 'eres', 'es', 'somos', 'sois', 'son'),
+  ('estoy', 'estás', 'está', 'estamos', 'estáis', 'están'),
+  ('tengo', 'tienes', 'tiene', 'tenemos', 'tenéis', 'tienen'),
+  ('conozco', 'conoces', 'conocen', 'conocemos', 'conocéis', 'conocen'),
+  ('hago', 'haces', 'hace', 'hacemos', 'hacéis', 'hacen'),
+  ('he', 'has', 'ha,hay', 'hemos', 'habéis', 'han'),
+  ('bebo', 'bebes', 'bebe', 'bebemos', 'bebéis', 'beben'),
+  ('como', 'comes', 'come', 'comemos', 'coméis', 'comen'),
+  ('siento', 'sientes', 'siente', 'sentimos', 'sentís', 'sienten'),
+  ('espero', 'esperas', 'espera', 'esperamos', 'esperáis', 'esperan');
 
 
-INSERT INTO conjugation_preterite (verb_id, yo, "tú", "él/ella/Usted", nosotros, vosotros, "ellos/ellas/Ustedes" )
+INSERT INTO conjugation_preterite (yo, "tú", "third", nosotros, vosotros, "group" )
   VALUES
-  ( '1', 'fui', 'fuiste', 'fue', 'fuimos', 'fuisteis', 'fueron'),
-  ( '2', 'estuve', 'estuviste', 'estuvo', 'estuvimos', 'estuvisteis', 'estuvieron'),
-  ( '3', 'tuve', 'tuviste', 'tuvo', 'tuvimos', 'tuvisteis', 'tuvieron'),
-  ( '4', 'conocí', 'conociste', 'conoció', 'conocimos', 'conocisteis', 'conocieron'),
-  ( '5', 'hice', 'hiciste', 'hizo', 'hicimos', 'hicisteis', 'hicieron'),
-  ( '6', 'hube', 'hubiste', 'hubo', 'hubimos', 'hubisteis', 'hubieron'),
-  ( '7', 'bebí', 'bebiste', 'bebió', 'bebimos', 'bebisteis', 'bebieron'),
-  ( '8', 'comí', 'comiste', 'comiò', 'comimos', 'comisteis', 'comieron'),
-  ( '9', 'sentí', 'sentiste', 'sintió', 'sentimos', 'sentisteis', 'sintieron'),
-  ( '10', 'esperé', 'esperaste', 'esperó', 'esperamos', 'esperasteis', 'esperaron');
+  ( 'fui', 'fuiste', 'fue', 'fuimos', 'fuisteis', 'fueron'),
+  ( 'estuve', 'estuviste', 'estuvo', 'estuvimos', 'estuvisteis', 'estuvieron'),
+  ( 'tuve', 'tuviste', 'tuvo', 'tuvimos', 'tuvisteis', 'tuvieron'),
+  ( 'conocí', 'conociste', 'conoció', 'conocimos', 'conocisteis', 'conocieron'),
+  ( 'hice', 'hiciste', 'hizo', 'hicimos', 'hicisteis', 'hicieron'),
+  ( 'hube', 'hubiste', 'hubo', 'hubimos', 'hubisteis', 'hubieron'),
+  ( 'bebí', 'bebiste', 'bebió', 'bebimos', 'bebisteis', 'bebieron'),
+  ( 'comí', 'comiste', 'comiò', 'comimos', 'comisteis', 'comieron'),
+  ( 'sentí', 'sentiste', 'sintió', 'sentimos', 'sentisteis', 'sintieron'),
+  ('esperé', 'esperaste', 'esperó', 'esperamos', 'esperasteis', 'esperaron');
 
 
 
-INSERT INTO conjugation_future (verb_id, yo, "tú", "él/ella/Usted", nosotros, vosotros, "ellos/ellas/Ustedes" )
+INSERT INTO conjugation_future (yo, "tú", "third", nosotros, vosotros, "group" )
   VALUES
-  ('1', 'seré', 'serás', 'será', 'seremos', 'seréis', 'serán'),
-  ('2', 'estaré', 'estarás', 'estará', 'estaremos', 'estaréis', 'estarán'),
-  ('3', 'tendré', 'tendrás', 'tendrá', 'tendremos', 'tendréis', 'tendrán'),
-  ('4', 'conoceré', 'conocerás', 'conocerá', 'conoceremos', 'conoceréis', 'conocerán'),
-  ('5', 'haré', 'harás', 'hará', 'haremos', 'haréis', 'harán'),
-  ('6', 'habré', 'habrás', 'habrá', 'habremos', 'habréis', 'habrán'),
-  ('7', 'beberé', 'beberás', 'beberá', 'beberemos', 'beberéis', 'beberán'),
-  ('8', 'comeré', 'comerás', 'comerá', 'comeremos', 'comeréis', 'comerán'),
-  ('9', 'sentiré', 'sentirás', 'sentirá', 'sentiremos', 'sentiréis', 'sentirán'),
-  ('10', 'esperé', 'esperarás', 'esperará', 'esperaremos', 'esperaréis', 'esperarán');
+  ('seré', 'serás', 'será', 'seremos', 'seréis', 'serán'),
+  ('estaré', 'estarás', 'estará', 'estaremos', 'estaréis', 'estarán'),
+  ('tendré', 'tendrás', 'tendrá', 'tendremos', 'tendréis', 'tendrán'),
+  ('conoceré', 'conocerás', 'conocerá', 'conoceremos', 'conoceréis', 'conocerán'),
+  ('haré', 'harás', 'hará', 'haremos', 'haréis', 'harán'),
+  ('habré', 'habrás', 'habrá', 'habremos', 'habréis', 'habrán'),
+  ('beberé', 'beberás', 'beberá', 'beberemos', 'beberéis', 'beberán'),
+  ('comeré', 'comerás', 'comerá', 'comeremos', 'comeréis', 'comerán'),
+  ('sentiré', 'sentirás', 'sentirá', 'sentiremos', 'sentiréis', 'sentirán'),
+  ('esperé', 'esperarás', 'esperará', 'esperaremos', 'esperaréis', 'esperarán');
 
 
 
-INSERT INTO conjugation_conditional (verb_id, yo, "tú", "él/ella/Usted", nosotros, vosotros, "ellos/ellas/Ustedes" )
+INSERT INTO conjugation_conditional (yo, "tú", "third", nosotros, vosotros, "group" )
   VALUES
-  ('1', 'sería', 'serías', 'sería', 'seríamos', 'seríais', 'serían'),
-  ('2', 'estaría', 'estarías', 'estaría', 'estaríamos', 'estaríais','estarían'),
-  ('3', 'tendría', 'tendrías', 'tendría', 'tendríamos', 'tendríais', 'tendrían'),
-  ('4', 'conocería', 'conocerías', 'conocería', 'conoceríamos', 'conoceríais', 'concocerían'),
-  ('5', 'haría', 'harías', 'haría', 'haríamos', 'haríais', 'harían'),
-  ('6', 'habría', 'habrías', 'habría', 'habríamos', 'habríais', 'habrían'),
-  ('7', 'bebería', 'beberías', 'bebería', 'beberíamos', 'beberíais', 'beberían'),
-  ('8', 'comería', 'comerías', 'comería', 'comeríamos', 'comeríais', 'comerían'),
-  ('9', 'sentiría', 'sentirías', 'sentiría', 'sentiríamos', 'sentiríais', 'sentirían'),
-  ('10', 'esperaría', 'esperarías', 'esperaría', 'esperaríamos', 'esperaríais', 'esperarían');
+  ('sería', 'serías', 'sería', 'seríamos', 'seríais', 'serían'),
+  ('estaría', 'estarías', 'estaría', 'estaríamos', 'estaríais','estarían'),
+  ('tendría', 'tendrías', 'tendría', 'tendríamos', 'tendríais', 'tendrían'),
+  ('conocería', 'conocerías', 'conocería', 'conoceríamos', 'conoceríais', 'concocerían'),
+  ('haría', 'harías', 'haría', 'haríamos', 'haríais', 'harían'),
+  ('habría', 'habrías', 'habría', 'habríamos', 'habríais', 'habrían'),
+  ('bebería', 'beberías', 'bebería', 'beberíamos', 'beberíais', 'beberían'),
+  ('comería', 'comerías', 'comería', 'comeríamos', 'comeríais', 'comerían'),
+  ('sentiría', 'sentirías', 'sentiría', 'sentiríamos', 'sentiríais', 'sentirían'),
+  ('esperaría', 'esperarías', 'esperaría', 'esperaríamos', 'esperaríais', 'esperarían');
 
 
 -- database -server-side -client-side

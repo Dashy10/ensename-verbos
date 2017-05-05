@@ -159,6 +159,88 @@ getAllconditional = (req,res,next)  => {
 
 };
 
+///////////////////DELETE A VERB BASED ON TENSE//////////////////
+deletePresent = (req,res,next) => {
+  var present_tenseID = parseInt(req.params.id)
+  db.result('delete from conjugation_present where id = $1', present_tenseID)
+}
+
+deletePreterite = (req,res,next) => {
+  var preterite_tenseID = parseInt(req.params.id)
+  db.result('delete from conjugation_preterite where id = $1', preterite_tenseID)
+}
+
+deleteFuture = (req,res,next) => {
+  var future_tenseID = parseInt(req.params.id)
+  db.result('delete from conjugation_future where id = $1', future_tenseID)
+}
+
+deleteConditional = (req,res,next) => {
+  var conditional_tenseID = parseInt(req.params.id)
+  db.result('delete from conjugation_conditional where id = $1', conditional_tenseID)
+}
+
+
+//////////////////CREATE A VERB/////////////////////////////////
+createPresentverb = (req,rest,next) => {
+  req.body.verb_id = parseInt(req.body.verb_id)
+
+  db.none('insert into conjugation_present(yo, "tú", "third", nosotros, vosotros, "group")' +
+      'values(${yo}, ${"tú"}, ${"third"}, ${nosotros}, ${vosotros}, ${"group"})',
+    req.body)
+  .then(res.redirect('/contribuciones'))
+}
+
+createPreteriteverb = (req,rest,next) => {
+  req.body.verb_id = parseInt(req.body.verb_id)
+
+  db.none('insert into conjugation_present(yo, "tú", "third", nosotros, vosotros, "group")' +
+      'values(${yo}, ${"tú"}, ${"third"}, ${nosotros}, ${vosotros}, ${"group"})',
+    req.body)
+  .then(res.redirect('/contribuciones'))
+}
+
+createFutureverb = (req,rest,next) => {
+  req.body.verb_id = parseInt(req.body.verb_id)
+
+  db.none('insert into conjugation_present(yo, "tú", "third", nosotros, vosotros, "group")' +
+      'values(${yo}, ${"tú"}, ${"third"}, ${nosotros}, ${vosotros}, ${"group"})',
+    req.body)
+  .then(res.redirect('/contribuciones'))
+}
+
+createConditionalverb = (req,rest,next) => {
+  req.body.verb_id = parseInt(req.body.verb_id)
+
+  db.none('insert into conjugation_present(yo, "tú", "third", nosotros, vosotros, "group")' +
+      'values(${yo}, ${"tú"}, ${"third"}, ${nosotros}, ${vosotros}, ${"group"})',
+    req.body)
+  .then(res.redirect('/contribuciones'))
+}
+//////////////////UPDATE A VERB////////////////////////////////
+updatePresentverb = (req,res,next) => {
+
+  db.none('update conjugation_present set yo=$1, "tú"=$2, "third"=$3, nosotros=$4, vosotros=$5, "group"=$6 where verb_id=$7',
+    [req.body.yo, req.body.tú, req.body.third, req.body.nosotros, req.body.vosotros, req.body.group])
+}
+
+updatePreteriteverb = (req,res,next) => {
+
+  db.none('update conjugation_preterite set yo=$1, "tú"=$2, "third"=$3, nosotros=$4, vosotros=$5, "group"=$6 where verb_id=$7',
+    [req.body.yo, req.body.tú, req.body.third, req.body.nosotros, req.body.vosotros, req.body.group])
+}
+
+updateFutureverb = (req,res,next) => {
+
+  db.none('update conjugation_future set yo=$1, "tú"=$2, "third"=$3, nosotros=$4, vosotros=$5, "group"=$6 where verb_id=$7',
+    [req.body.yo, req.body.tú, req.body.third, req.body.nosotros, req.body.vosotros, req.body.group])
+}
+
+updateConditionalverb = (req,res,next) => {
+
+  db.none('update conjugation_conditional set yo=$1, "tú"=$2, "third"=$3, nosotros=$4, vosotros=$5, "group"=$6 where verb_id=$7',
+    [req.body.yo, req.body.tú, req.body.third, req.body.nosotros, req.body.vosotros, req.body.group])
+}
 
 module.exports = {
   getAllpresent: getAllpresent,
@@ -169,6 +251,18 @@ module.exports = {
   getPreteriteverb: getPreteriteverb,
   getFutureverb: getFutureverb,
   getConditionalverb: getConditionalverb,
+  deletePresent: deletePresent,
+  deletePreterite: deletePreterite,
+  deleteFuture: deleteFuture,
+  deleteConditional: deleteConditional,
+  createPresentverb: createPresentverb,
+  createPreteriteverb: createPreteriteverb,
+  createFutureverb: createFutureverb,
+  createConditionalverb: createConditionalverb,
+  updatePresentverb: updatePresentverb,
+  updatePreteriteverb: updatePreteriteverb,
+  updateFutureverb: updateFutureverb,
+  updateConditionalverb: updateConditionalverb,
 
 };
 ////////////////NOTES TO MYSELF//////////////////

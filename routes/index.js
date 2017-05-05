@@ -21,6 +21,14 @@ router.get('/present-tense/:id', db.getPresentverb);
 router.get('/preterite-tense/:id', db.getPreteriteverb);
 router.get('/future-tense/:id', db.getFutureverb);
 router.get('/conditional-tense/:id', db.getConditionalverb);
+router.delete('/present-tense/:id', db.deletePresent);
+router.delete('/preterite-tense/:id', db.deletePreterite);
+router.delete('/future-tense/:id', db.deleteFuture);
+router.delete('/conditional-tense/:id', db.deleteConditional);
+router.post('/contribuciones', db.createPresentverb);
+router.post('/contribuciones', db.createPreteriteverb);
+router.post('/contribuciones', db.createFutureverb);
+router.post('/contribuciones', db.createConditionalverb);
 // router.get('/verbs', db.getAllverbs);
 
 module.exports = router;
