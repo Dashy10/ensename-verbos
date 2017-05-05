@@ -1,12 +1,25 @@
-$(function(){
+// var express = require('express');
+// var router = express.Router();
+// var cors = require('cors');
+// var db = require('../db/queries');
   // grab button by id
-  $('#get_verbs').on('click',function(e){
-      e.preventDefault();
-    $('.mostrame').css("opacity", ".5");
+  let present_tenseURL = 'http://localhost:3000/present-tense/';
+  let preterite_tenseURL = 'localhost:3000/preterite-tense';
+  let future_tenseURL = 'localhost:3000/future-tense';
+  let conditional_tenseURL = 'localhost:3000/conditional-tense';
+  let mostrame = $('.mostrame')
 
+  $('#get_verbs').on('click',function(){
+    let input = $('#verb_input').val();
 
+    let verb = encodeURI(input);
+
+    axios.get(present_tenseURL + verb)
+    .then(function(res){
+      window.location.href ='/present-tense/' + verb
+    });
   });
-});
+
 
 // $('#get_verbs').on('click',function(){
 //   console.log('ya');
@@ -30,4 +43,6 @@ $(function(){
 //     })
 //     console.log(verb);
 //   })
+//
+
 //
