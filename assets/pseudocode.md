@@ -63,6 +63,17 @@ ON verb_table.id = conjugation_present.verb_id;
 
 #### Using jQuery:
 
-- 
+- assign an on click to the submit button
+- prevent default behavior immediately
+- set opacity of empty div from 0 to 0.5
+
+#### Display verbs form:
+
+- Grab my json data and store it inside of variable
+- That variable will now be an object
+-  Dynamically create an unordered list inside of my empty div on the index.ejs page.
+-  Create a list item for every verb pronoun that is represented in my json data 
+-  Then I style that bish 
+
 
 
