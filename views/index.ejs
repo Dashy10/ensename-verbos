@@ -11,13 +11,41 @@
         <input id ='get_verbs' type ="submit" value="Conjugate verb">
       </form>
       <div class ='mostrame'>
-        <ul id = verb-list>
-          <li>Yo:<span id = 'singular-first'></span></li>
-          <li>Tú:<span id ='singular-second'></span></li>
-          <li>él/ella/Usted:<span id ='singular-third'></span></li>
-          <li>Nosotros:<span id ='plural-first'></span></li>
-          <li>Vosotros:<span id='plural-second'></span></li>
-          <li>Ellos/Ellas/Ustedes:<span id ='plural-third'></span></li>
+        <ul id = verb-list-present-tense>
+          <li>Present-tense</li>
+          <li>Yo:<span id = 'singular-first-present'></span></li>
+          <li>Tú:<span id ='singular-second-present'></span></li>
+          <li>Él/Ella/Usted:<span id ='singular-third-present'></span></li>
+          <li>Nosotros:<span id ='plural-first-present'></span></li>
+          <li>Vosotros:<span id='plural-second-present'></span></li>
+          <li>Ellos/Ellas/Ustedes:<span id ='plural-third-present'></span></li>
+        </ul>
+        <ul id = verb-list-preterite-tense>
+          <li>Preterite-tense</li>
+          <li><span id = 'singular-first-preterite'></span></li>
+          <li><span id ='singular-second-preterite'></span></li>
+          <li><span id ='singular-third-preterite'></span></li>
+          <li><span id ='plural-first-preterite'></span></li>
+          <li><span id='plural-second-preterite'></span></li>
+          <li><span id ='plural-third-preterite'></span></li>
+        </ul>
+        <ul id = verb-list-future-tense>
+          <li>Future-tense</li>
+          <li><span id = 'singular-first-future'></span></li>
+          <li><span id ='singular-second-future'></span></li>
+          <li><span id ='singular-third-future'></span></li>
+          <li><span id ='plural-first-future'></span></li>
+          <li><span id='plural-second-future'></span></li>
+          <li><span id ='plural-third-future'></span></li>
+        </ul>
+        <ul id = verb-list-conditional-tense>
+          <li>Conditional-tense</li>
+          <li><span id = 'singular-first-conditional'></span></li>
+          <li><span id ='singular-second-conditional'></span></li>
+          <li><span id ='singular-third-conditional'></span></li>
+          <li><span id ='plural-first-conditional'></span></li>
+          <li><span id='plural-second-conditional'></span></li>
+          <li><span id ='plural-third-conditional'></span></li>
         </ul>
       </div>
     </div>
@@ -25,9 +53,8 @@
 
     <footer class ='front-page'>
       <span><a href="./">Hogar</a></span>
-      <span>Sobre</span>
       <span><a href="./contribuciones">Contribucíones</a></span>
-      <span>Contacto</span>
+      <span><a id='email' href="mailto:dashiell.lumas@gmail.com">Contacto</span>
     </footer>
 
   <% include ./partials/scripts %>

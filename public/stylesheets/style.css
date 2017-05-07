@@ -23,14 +23,14 @@ body {
 .front-page {
   position: relative;
   top: 130px;
-  left: 50px;
+  left: 200px;
   color: #DCBE68;
   font-size: 18pt;
 }
 
 .contribuciones {
   position: relative;
-  top: 370px;
+  top: 415px;
   left: 50px;
   color: #DCBE68;
   font-size: 18pt;
@@ -53,12 +53,15 @@ a {
 }
 
 .mostrame {
+  display: flex;
+  flex: 1;
   position: relative;
   top: 10px;
-  width: 750px;
-  height: 300px;
-  background-color: #C2930B;
+  width: 870px;
+  height: 350px;
+  background-color: #DCBE68;
   border: 7px solid #351c75;
+  border-radius: 2.5%;
   opacity:0;
 }
 
