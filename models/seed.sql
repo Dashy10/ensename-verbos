@@ -38,7 +38,7 @@ INSERT INTO conjugation_preterite (verb, yo, "tú", "third", nosotros, vosotros,
   ( 'hacer','hice', 'hiciste', 'hizo', 'hicimos', 'hicisteis', 'hicieron'),
   ( 'haber','hube', 'hubiste', 'hubo', 'hubimos', 'hubisteis', 'hubieron'),
   ( 'beber','bebí', 'bebiste', 'bebió', 'bebimos', 'bebisteis', 'bebieron'),
-  ( 'comer','comí', 'comiste', 'comiò', 'comimos', 'comisteis', 'comieron'),
+  ( 'comer','comí', 'comiste', 'comió', 'comimos', 'comisteis', 'comieron'),
   ( 'sentir','sentí', 'sentiste', 'sintió', 'sentimos', 'sentisteis', 'sintieron'),
   ('esperar','esperé', 'esperaste', 'esperó', 'esperamos', 'esperasteis', 'esperaron');
 

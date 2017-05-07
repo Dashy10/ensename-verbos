@@ -7,18 +7,26 @@
       <h1><%= title %></h1>
       <form id="dame_verbos" method="">
         <input id = 'verb_input' type= "text" name="verbo" placeholder="dame verbos">
-        <!-- <input id = 'tense_input' type= "text" name="tense" placeholder="tense"> -->
         <input id ='get_verbs' type ="submit" value="Conjugate verb">
       </form>
       <div class ='mostrame'>
+        <ul id = pronouns>
+          <li>Pronouns</li>
+          <li>Yo:</li>
+          <li>Tú:</li>
+          <li>Él/Ella/Usted:</li>
+          <li>Nosotros:</li>
+          <li>Vosotros:</li>
+          <li>Ellos/Ellas/Ustedes:</li>
+        </ul>
         <ul id = verb-list-present-tense>
           <li>Present-tense</li>
-          <li>Yo:<span id = 'singular-first-present'></span></li>
-          <li>Tú:<span id ='singular-second-present'></span></li>
-          <li>Él/Ella/Usted:<span id ='singular-third-present'></span></li>
-          <li>Nosotros:<span id ='plural-first-present'></span></li>
-          <li>Vosotros:<span id='plural-second-present'></span></li>
-          <li>Ellos/Ellas/Ustedes:<span id ='plural-third-present'></span></li>
+          <li><span id = 'singular-first-present'></span></li>
+          <li><span id ='singular-second-present'></span></li>
+          <li><span id ='singular-third-present'></span></li>
+          <li><span id ='plural-first-present'></span></li>
+          <li><span id='plural-second-present'></span></li>
+          <li><span id ='plural-third-present'></span></li>
         </ul>
         <ul id = verb-list-preterite-tense>
           <li>Preterite-tense</li>
