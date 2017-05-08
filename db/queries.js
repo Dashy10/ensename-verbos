@@ -178,19 +178,14 @@ deleteConditional = (req,res,next) => {
 
 
 //////////////////CREATE A VERB/////////////////////////////////
-createPresentverb = (req,res,next) => {
+createPresentverb = (req,res, next) => {
+  console.log('createPresentverb is awake!')
   db.none('INSERT INTO conjugation_present(verb, yo, "tú", "third", nosotros, vosotros, "group")' +
       'values(${verb}, ${yo}, ${"tú"}, ${"third"}, ${nosotros}, ${vosotros}, ${"group"})',
     req.body)
-    .then(function(){
-      res.status(200)
-      .json({
-        status: 'sucess',
-        message: 'One verb inserted'
-      });
-    })
-    .catch(function(err){
-      return next(err);
+    .then(function(data){
+      console.log(data)
+      res.render('/contribuciones', {data:data} )
     })
   // .then(res.redirect('/contribuciones'))
 }

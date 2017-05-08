@@ -1,18 +1,16 @@
-Project 2 (Your project name here)
+Enseñame Tus Verbos
 -----------------------
 A brief synopsis of your project. Should not be longer than a paragraph.
 
 Wireframes
 ----------
-checkout [this](https://webdesign.tutsplus.com/articles/a-beginners-guide-to-wireframing--webdesign-7399) resource for some ideas about wireframing and some good tools that might help.
+
 
 User Stories
 ------------
 here's the [wikipedia](https://en.wikipedia.org/wiki/User_story) entry for user stories.
 
-Pseudocode
-----------
-Include some pseudocode. It doesn't have to be your entire app. Maybe a crucial function or two. Maybe a high level view of some of the way different parts of your project connect with each other.
+
 
 ERD or other visual representation of your database
 ---
@@ -32,3 +30,23 @@ This is a very important step and one that you did not need in your first projec
 3. On your terminal, run psql -d project_2_db -f migrations/migrations.sql
 4. If you haven't already, install nodemon package (npm install -g nodemon)
 5. Run nodemon, app should be available on localhost:3000
+
+Code Example(s)
+---------------
+
+Contributing
+----------------
+
+Minimum Viable Product
+----------------
+
+Major Hurdles
+----------------
+
+Future Improvements
+----------------
+
+Author(s)
+----------------
+Dashiell Lumas
+

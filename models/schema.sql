@@ -62,13 +62,3 @@ CREATE TABLE conjugation_conditional
   vosotros VARCHAR(255),
   "group" VARCHAR(255)
 );
-
--- CHANGE verb_idto verb_verb_id
-
-
--- Schema.sql && seed.sql
--- \c connect to database
-
-
-
--- psql -f schema.sql && -f seed.sql
