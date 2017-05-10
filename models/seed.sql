@@ -15,7 +15,7 @@ INSERT INTO verb_table (verb)
   ('esperar');
 
 
-INSERT INTO conjugation_present (verb, yo, "tú", "third", nosotros, vosotros, "group" )
+INSERT INTO conjugation_present (verb, yo, tu, third, nosotros, vosotros, plural )
   VALUES
   ('ser', 'soy', 'eres', 'es', 'somos', 'sois', 'son'),
   ('estar', 'estoy', 'estás', 'está', 'estamos', 'estáis', 'están'),
@@ -29,7 +29,7 @@ INSERT INTO conjugation_present (verb, yo, "tú", "third", nosotros, vosotros, "
   ('esperar','espero', 'esperas', 'espera', 'esperamos', 'esperáis', 'esperan');
 
 
-INSERT INTO conjugation_preterite (verb, yo, "tú", "third", nosotros, vosotros, "group" )
+INSERT INTO conjugation_preterite (verb, yo, tu, third, nosotros, vosotros, plural )
   VALUES
   ( 'ser','fui', 'fuiste', 'fue', 'fuimos', 'fuisteis', 'fueron'),
   ( 'estar','estuve', 'estuviste', 'estuvo', 'estuvimos', 'estuvisteis', 'estuvieron'),
@@ -44,7 +44,7 @@ INSERT INTO conjugation_preterite (verb, yo, "tú", "third", nosotros, vosotros,
 
 
 
-INSERT INTO conjugation_future (verb, yo,"tú", "third", nosotros, vosotros, "group" )
+INSERT INTO conjugation_future (verb, yo, tu, third, nosotros, vosotros, plural )
   VALUES
   ('ser', 'seré', 'serás', 'será', 'seremos', 'seréis', 'serán'),
   ('estar','estaré', 'estarás', 'estará', 'estaremos', 'estaréis', 'estarán'),
@@ -59,7 +59,7 @@ INSERT INTO conjugation_future (verb, yo,"tú", "third", nosotros, vosotros, "gr
 
 
 
-INSERT INTO conjugation_conditional (verb, yo,"tú", "third", nosotros, vosotros, "group" )
+INSERT INTO conjugation_conditional (verb, yo,tu, third, nosotros, vosotros, plural )
   VALUES
   ('ser','sería', 'serías', 'sería', 'seríamos', 'seríais', 'serían'),
   ('estar','estaría', 'estarías', 'estaría', 'estaríamos', 'estaríais','estarían'),

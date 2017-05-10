@@ -5,16 +5,21 @@
   <body>
     <div class = 'flex_wrapper'>
       <h1><%= title %></h1>
-      <form id="crear_verbos" method="POST">
-        <input type= "text" name="Verbo" placeholder="Verbo">
-        <input type= "text" name="Yo" placeholder="Yo">
-        <input type= "text" name="tú" placeholder="Tú">
-        <input type= "text" name="él/ella/Usted" placeholder="Él/Ella/Usted">
-        <input type= "text" name="nosotros" placeholder="Nosotros">
-        <input type= "text" name="vosotros" placeholder="Vosotros">
-        <input type= "text" name="ellos/ellas/Ustedes" placeholder="Ellos/Ellas/Ustedes">
-        <input type= "text" name="tense" placeholder="Input tense">
-        <input type ="submit" value="Submit">
+      <form action="/present-tense" id="crear_verbos" method="POST">
+        <input class="contribute" type= "text" name="Verbo" placeholder="Verbo">
+        <input class="contribute" type= "text" name="Yo" placeholder="Yo">
+        <input class="contribute" type= "text" name="tú" placeholder="Tú">
+        <input class="contribute" type= "text" name="él/ella/Usted" placeholder="Él/Ella/Usted">
+        <input class="contribute" type= "text" name="nosotros" placeholder="Nosotros">
+        <input class="contribute" type= "text" name="vosotros" placeholder="Vosotros">
+        <input class="contribute" type= "text" name="ellos/ellas/Ustedes" placeholder="Ellos/Ellas/Ustedes">
+        <select name="tense" id="tense">
+          <option value="present">Present</option>
+          <option value="preterite">Preterite</option>
+          <option value="future">Future</option>
+          <option value="conditional">Conditional</option>
+        </select>
+        <input class="contribute" type ="submit" value="Submit">
       </form>
       </div>
 
@@ -25,7 +30,10 @@
       <span>Contacto</span>
     </footer>
 
-    
+    <% if(data) { %>
+        <% include ./partials/users %>
+       <% } %>
+
 
   <% include ./partials/scripts %>
   </body>

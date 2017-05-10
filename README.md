@@ -118,7 +118,7 @@ Minimum Viable Product
 
 - Giving the user the ability to input a verb and receive four conjugated tenses
 
-- Giving the user the ability to enter a verb with conjugations into the database baased on tense.
+- Giving the user the ability to enter a verb with conjugations into the database based on tense.
 
 Major Hurdles
 ----------------

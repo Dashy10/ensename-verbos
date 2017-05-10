@@ -7,12 +7,10 @@ var db = require('../db/queries');
 /* GET home page. */
 // RENDERING INDEX.VIEW FILE
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Enseñame Tus Verbos' });
+  res.render('index', { title: 'Enseñame Tus Verbos'});
 });
 
-router.get('/contribuciones', function(req, res, next) {
-  res.render('contribuciones', {title: 'Contribucíones'});
-});
+router.get('/contribuciones', db.getAllpresentContributions);
 // DYNAMICALLY CREATING NEW ROUTES
 router.get('/present-tense', db.getAllpresent);
 router.get('/preterite-tense', db.getAllpreterite);
@@ -26,14 +24,14 @@ router.delete('/present-tense/:verb', db.deletePresent);
 router.delete('/preterite-tense/:verb', db.deletePreterite);
 router.delete('/future-tense/:verb', db.deleteFuture);
 router.delete('/conditional-tense/:verb', db.deleteConditional);
-// router.get('/contribuciones', db.createPresentverb);
-// router.post('/contribuciones', db.createPresentverb);
-// router.post('/contribuciones', db.createPreteriteverb);
-// router.post('/contribuciones', db.createFutureverb);
-// router.post('/contribuciones', db.createConditionalverb);
-router.patch('/present-tense/:verb', db.updatePresentverb);
-router.patch('/preterite-tense/:verb', db.updatePreteriteverb);
-router.patch('/future-tense/:verb', db.updateFutureverb);
-router.patch('/conditional-tense/:verb', db.updateConditionalverb);
+router.post('/present-tense', db.createPresentverb);
+router.post('/contribuciones/', db.createPresentverb); // cut down on routes
+router.post('/contribuciones', db.createPreteriteverb);
+router.post('/contribuciones', db.createFutureverb);
+router.post('/contribuciones', db.createConditionalverb);
+router.put('/present-tense/:verb', db.updatePresentverb);
+router.put('/preterite-tense/:verb', db.updatePreteriteverb);
+router.put('/future-tense/:verb', db.updateFutureverb);
+router.put('/conditional-tense/:verb', db.updateConditionalverb);
 
 module.exports = router;

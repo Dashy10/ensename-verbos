@@ -97,6 +97,22 @@ getAllpresent = (req,res,next)  => {
       data: data,
       message: 'Success getting all verbs'
     });
+    console.log(data);
+  })
+  .catch(function(err){
+    return next(err);
+  });
+
+};
+
+getAllpresentContributions = (req,res,next)  => {
+
+   db.any('SELECT * FROM conjugation_present')
+  .then(function(data){
+    res.status(200)
+    .render(
+      'contribuciones', {title: 'Contribucíones', data: data}
+    );
   })
   .catch(function(err){
     return next(err);
@@ -179,9 +195,9 @@ deleteConditional = (req,res,next) => {
 
 //////////////////CREATE A VERB/////////////////////////////////
 createPresentverb = (req,res, next) => {
-  console.log('createPresentverb is awake!')
-  db.none('INSERT INTO conjugation_present(verb, yo, "tú", "third", nosotros, vosotros, "group")' +
-      'values(${verb}, ${yo}, ${"tú"}, ${"third"}, ${nosotros}, ${vosotros}, ${"group"})',
+  console.log('createPresentverb is awake!', req.body)
+  db.none("INSERT INTO conjugation_present(verb, yo, tu, third, nosotros, vosotros, plural)" +
+      "values(${verb}, ${yo}, ${tu}, ${third}, ${nosotros}, ${vosotros}, ${plural})",
     req.body)
     .then(function(data){
       console.log(data)
@@ -193,8 +209,8 @@ createPresentverb = (req,res, next) => {
 createPreteriteverb = (req,res,next) => {
   req.body.verb_id = parseInt(req.body.verb_id)
 
-  db.none('insert into conjugation_present(verb, yo, "tú", "third", nosotros, vosotros, "group")' +
-      'values( ${verb},${yo}, ${"tú"}, ${"third"}, ${nosotros}, ${vosotros}, ${"group"})',
+  db.none('insert into conjugation_present(verb, yo, tu, third, nosotros, vosotros, plural)' +
+      'values( ${verb},${yo}, ${tu}, ${third}, ${nosotros}, ${vosotros}, ${plural})',
     req.body)
   .then(res.redirect('/contribuciones'))
 }
@@ -202,8 +218,8 @@ createPreteriteverb = (req,res,next) => {
 createFutureverb = (req,res,next) => {
   req.body.verb_id = parseInt(req.body.verb_id)
 
-  db.none('insert into conjugation_present(verb, yo, "tú", "third", nosotros, vosotros, "group")' +
-      'values(${verb}, ${yo}, ${"tú"}, ${"third"}, ${nosotros}, ${vosotros}, ${"group"})',
+  db.none('insert into conjugation_present(verb, yo, tu, third, nosotros, vosotros, plural)' +
+      'values(${verb}, ${yo}, ${tu}, ${third}, ${nosotros}, ${vosotros}, ${plural})',
     req.body)
   .then(res.redirect('/contribuciones'))
 }
@@ -211,16 +227,16 @@ createFutureverb = (req,res,next) => {
 createConditionalverb = (req,res,next) => {
   req.body.verb_id = parseInt(req.body.verb_id)
 
-  db.none('insert into conjugation_present(verb, yo, "tú", "third", nosotros, vosotros, "group")' +
-      'values(${verb}, ${yo}, ${"tú"}, ${"third"}, ${nosotros}, ${vosotros}, ${"group"})',
+  db.none('insert into conjugation_present(verb, yo, tu, third, nosotros, vosotros, plural)' +
+      'values(${verb}, ${yo}, ${tu}, ${third}, ${nosotros}, ${vosotros}, ${plural})',
     req.body)
   .then(res.redirect('/contribuciones'))
 }
 //////////////////UPDATE A VERB////////////////////////////////
 updatePresentverb = (req,res,next) => {
 
-  db.none('update conjugation_present SET verb=$1, yo=$2, "tú"=$3, "third"=$4, nosotros=$5, vosotros=$6, "group"=$7 where verb_id=$8',
-    [req.body.verb, req.body.yo, req.body.tú, req.body.third, req.body.nosotros, req.body.vosotros, req.body.group, req.body.verb_id])
+  db.none('update conjugation_present SET verb=$1, yo=$2, tu=$3, third=$4, nosotros=$5, vosotros=$6, plural=$7 where verb_id=$8',
+    [req.body.verb, req.body.yo, req.body.tú, req.body.third, req.body.nosotros, req.body.vosotros, req.body.plural, req.body.verb_id])
     .then(function(){
       res.status(200)
       .json({
@@ -231,33 +247,34 @@ updatePresentverb = (req,res,next) => {
     .catch(function(err){
       return next(err);
     });
-    // .then(res.redirect('/contribuciones'))
+
 }
 
 updatePreteriteverb = (req,res,next) => {
 
-  db.none('update conjugation_preterite set verb=$1, yo=$2, "tú"=$3, "third"=$4, nosotros=$5, vosotros=$6, "group"=$7 where verb_id=$8',
-    [req.body.verb, req.body.yo, req.body.tú, req.body.third, req.body.nosotros, req.body.vosotros, req.body.group])
-    // .then(res.redirect('/contribuciones'))
+  db.none('update conjugation_preterite set verb=$1, yo=$2, tu=$3, third=$4, nosotros=$5, vosotros=$6, plural=$7 where verb_id=$8',
+    [req.body.verb, req.body.yo, req.body.tú, req.body.third, req.body.nosotros, req.body.vosotros, req.body.plural])
+
 }
 
 updateFutureverb = (req,res,next) => {
 
-  db.none('update conjugation_future set verb=$1, yo=$2, "tú"=$3, "third"=$4, nosotros=$5, vosotros=$6, "group"=$7 where verb_id=$8',
-    [req.body.verb, req.body.yo, req.body.tú, req.body.third, req.body.nosotros, req.body.vosotros, req.body.group])
-    // .then(res.redirect('/contribuciones'))
+  db.none('update conjugation_future set verb=$1, yo=$2, tu=$3, third=$4, nosotros=$5, vosotros=$6, plural=$7 where verb_id=$8',
+    [req.body.verb, req.body.yo, req.body.tú, req.body.third, req.body.nosotros, req.body.vosotros, req.body.plural])
+
 }
 
 updateConditionalverb = (req,res,next) => {
 
-  db.none('update conjugation_conditional set verb=$1, yo=$2, "tú"=$3, "third"=$4, nosotros=$5, vosotros=$6, "group"=$7 where verb_id=$8',
-    [req.body.verb, req.body.yo, req.body.tú, req.body.third, req.body.nosotros, req.body.vosotros, req.body.group])
-    // .then(res.redirect('/contribuciones'))
+  db.none('update conjugation_conditional set verb=$1, yo=$2, tu=$3, third=$4, nosotros=$5, vosotros=$6, plural=$7 where verb_id=$8',
+    [req.body.verb, req.body.yo, req.body.tú, req.body.third, req.body.nosotros, req.body.vosotros, req.body.plural])
+
 }
 
 
 
 module.exports = {
+  getAllpresentContributions: getAllpresentContributions,
   getAllpresent: getAllpresent,
   getAllpreterite: getAllpreterite,
   getAllfuture: getAllfuture,

@@ -6,8 +6,8 @@
     <div class = 'flex_wrapper'>
       <h1><%= title %></h1>
       <form id="dame_verbos" method="">
-        <input id = 'verb_input' type= "text" name="verbo" placeholder="dame verbos">
-        <input id ='get_verbs' type ="submit" value="Conjugate verb">
+        <input class="front" id = 'verb_input' type= "text" name="verbo" placeholder="dame verbos">
+        <input class="front" id ='get_verbs' type ="submit" value="Conjugate verb">
       </form>
       <div class ='mostrame'>
         <ul id = pronouns>
@@ -59,13 +59,13 @@
     </div>
 
 
-    <footer class ='front-page'>
+    <footer class ='front-page-footer'>
       <span><a href="./">Hogar</a></span>
       <span><a href="./contribuciones">Contribucíones</a></span>
       <span><a id='email' href="mailto:dashiell.lumas@gmail.com">Contacto</span>
     </footer>
 
-    
+
 
   <% include ./partials/scripts %>
   </body>
