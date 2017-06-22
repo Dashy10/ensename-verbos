@@ -11,11 +11,11 @@ CREATE TABLE verb_table
   verb VARCHAR(255)
 );
 
-DROP TABLE IF EXISTS conjugation_present;
+DROP TABLE IF EXISTS conjugation_present CASCADE;
 
 CREATE TABLE conjugation_present
 (verb_id SERIAL PRIMARY KEY,
-  verb VARCHAR(255),
+  verb VARCHAR(255) REFERENCES verb_table(verb),
   yo VARCHAR(255),
   tu VARCHAR(255),
   third VARCHAR(255),
@@ -24,11 +24,11 @@ CREATE TABLE conjugation_present
   plural VARCHAR(255)
 );
 
-DROP TABLE IF EXISTS conjugation_preterite;
+DROP TABLE IF EXISTS conjugation_preterite CASCADE;
 
 CREATE TABLE conjugation_preterite
 (verb_id SERIAL PRIMARY KEY,
-  verb VARCHAR(255),
+  verb VARCHAR(255) REFERENCES verb_table(verb),
   yo VARCHAR(255),
   tu VARCHAR(255),
   third VARCHAR(255),
@@ -37,11 +37,11 @@ CREATE TABLE conjugation_preterite
   plural VARCHAR(255)
 );
 
-DROP TABLE IF EXISTS conjugation_future;
+DROP TABLE IF EXISTS conjugation_future CASCADE;
 
 CREATE TABLE conjugation_future
 (verb_id SERIAL PRIMARY KEY,
-  verb VARCHAR(255),
+  verb VARCHAR(255) REFERENCES verb_table(verb),
   yo VARCHAR(255),
   tu VARCHAR(255),
   third VARCHAR(255),
@@ -50,11 +50,11 @@ CREATE TABLE conjugation_future
   plural VARCHAR(255)
 );
 
-DROP TABLE IF EXISTS conjugation_conditional;
+DROP TABLE IF EXISTS conjugation_conditional CASCADE;
 
 CREATE TABLE conjugation_conditional
 (verb_id SERIAL PRIMARY KEY,
-  verb VARCHAR(255),
+  verb VARCHAR(255) REFERENCES verb_table(verb),
   yo VARCHAR(255),
  tu VARCHAR(255),
   third VARCHAR(255),

@@ -1,1 +1,18 @@
-
+<h3>Verbs</h3>
+<ul>
+  <% data.forEach(function(d) { %>
+    <div class="created-verb-display">
+      <li data-id=<%=d.verb_id%>>
+        <input  class="input_item" type="text" name="verb" placeholder="<%= d.verb %>" readonly >
+        <input  class="input_item" type="text" name="yo" placeholder="<%= d.yo %>" readonly >
+        <input  class="input_item" type="text" name="tu" placeholder="<%= d.tu %>" readonly >
+        <input  class="input_item" type="text" name="third" placeholder="<%= d.third %>" readonly >
+        <input  class="input_item" type="text" name="nosotros" placeholder="<%= d.nosotros %>" readonly >
+        <input  class="input_item" type="text" name="vosotros" placeholder="<%= d.vosotros %>" readonly >
+        <input  class="input_item" type="text" name="plural" placeholder="<%= d.plural %>" readonly >
+      <button class="edit">Edit</button>
+	    <button class="delete">Delete</button>
+      </li>
+    </div>
+   <% }) %>
+</ul>
